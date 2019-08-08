@@ -1,0 +1,32 @@
+﻿@model Model.Student
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+@using (Html.BeginForm())
+{
+    <div class="col-md-3">
+        @Html.TextBoxFor(m => m.StudentCode)
+    </div><br />
+    <div class="col-md-3">
+        @Html.TextBoxFor(m => m.FirstName)
+    </div><br />
+    <div class="col-md-3">
+        @Html.TextBoxFor(m => m.LastName)
+    </div><br />
+    <div class="col-md-3">
+        @Html.TextBoxFor(m => m.Gender)
+    </div><br />
+    <div class="col-md-3">
+        @Html.TextBoxFor(m => m.DateOfBirth, "{0:yyyy-MM-dd}", new { type = "date" })
+    </div><br />
+    <input type="submit" value="Create" />    
+}
+</html>

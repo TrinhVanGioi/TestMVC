@@ -26,5 +26,17 @@ namespace TestMVC.Controllers
 
             return View();
         }
+        [HttpGet]
+        public ActionResult Create()
+        {  
+
+            return View("");
+        }
+        [HttpPost]
+        public ActionResult Create(Model.Student student)
+        {
+
+            return View();
+        }
     }
 }
